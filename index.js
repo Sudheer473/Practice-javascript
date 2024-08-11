@@ -1,25 +1,20 @@
-// Function for Problem 1
+// Function for problem 1
 function sumOfFirstNNaturalNumbers(N) {
-    
-
-    let sum = 0;
-    for (let i = 1; i <= 5; i++) {
+    var sum = 0;
+    for (i = 1; i <= N; i++) {
         sum += i;
     }
     return sum;
 }
-N = 5;
-console.log(sumOfFirstNNaturalNumbers(N)); //Output: 15
-
+var N = 5;
+console.log(sumOfFirstNNaturalNumbers(N)); // Output: 15
 
 
 
 // Function for problem 2
 function countEvenNumbers(arr) {
-    let evenCount = 0;
-    arr = [1, 2, 3, 4, 5, 6];
-
-    for (let i = 0; i < arr.length; i++) {
+    var evenCount = 0;
+    for (i = 1; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
             evenCount++;
         }
@@ -32,16 +27,15 @@ result = countEvenNumbers(arr);
 console.log("Number of even numbers:", result);  // Output: 3
 
 
-
 // Function for problem 3
 function reverseArray(arr) {
-    var (arr=[1, 2, 3, 4, 5]);
-    let reversedArray = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        reversedArray.push(arr[i]);
+    var reversedArray = [];
+    for (i = 0; i < arr.length; i++) {
+        reversedArray[i] = arr[arr.length - 1 - i];
     }
     return reversedArray;
 }
+arr = [1, 2, 3, 4, 5];
 console.log(reverseArray(arr)); // Output: [5, 4, 3, 2, 1]
 
 
@@ -49,13 +43,10 @@ console.log(reverseArray(arr)); // Output: [5, 4, 3, 2, 1]
 
 // Function for problem 4
 function sumArrayElements(arr) {
-    let sum = 0;
-
-    // Loop through each element in the array
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i]; // Add each element to the sum
+    var sum = 0;
+    for (i = 1; i < arr.length; i++) {
+        sum += arr[i];
     }
-
     return sum;
 }
 arr = [1, 2, 3, 4, 5];
@@ -65,23 +56,25 @@ console.log("Sum of array elements:", result);  // output: 15
 
 
 // Function for problem 5
-function factorial(N) {
-    if (N === 0 || N === 1) {
-
-        return 1;
+function factorial(M) {
+    var result = 1;
+    for (let i = 2; i <= M; i++) {
+        result *= i;
     }
-    return N * factorial(N - 1);
+    return result;
 }
-N = 4;
-console.log(factorial(N));  // Output: 24
+var M = 4;
+console.log(factorial(M));  // Output: 24
+
 
 
 // Function for problem 6
 function findMax(arr) {
+    var arr = [1, 3, 7, 2, 5];
     if (arr.length === 0) {
-        return undefined; // Return undefined if the array is empty
+        return undefined;
     }
-    let max = arr[0];
+    var max = arr[0];
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] > max) {
             max = arr[i];
@@ -89,23 +82,23 @@ function findMax(arr) {
     }
     return max;
 }
-arr = [1, 3, 7, 2, 5];
 console.log(findMax(arr));  // Output: 7
 
 
 
 // Function for problem 7
 function countOddNumbers(arr) {
-    let count = 0;
-    for (let i = 0; i < arr.length; i++) {
+    var count = 0;
+    var arr = [1, 2, 3, 4, 5, 6];
+    for (i = 0; i < arr.length; i++) {
         if (arr[i] % 2 !== 0) {
             count++;
         }
     }
     return count;
 }
-arr = [1, 2, 3, 4, 5, 6];
 console.log(countOddNumbers(arr));  // Output: 3
+
 
 
 
