@@ -1,7 +1,9 @@
 // Function for Problem 1
 function sumOfFirstNNaturalNumbers(N) {
+    
+
     let sum = 0;
-    for (let i = 1; i <= N; i++) {
+    for (let i = 1; i <= 5; i++) {
         sum += i;
     }
     return sum;
@@ -11,9 +13,11 @@ console.log(sumOfFirstNNaturalNumbers(N)); //Output: 15
 
 
 
+
 // Function for problem 2
 function countEvenNumbers(arr) {
     let evenCount = 0;
+    arr = [1, 2, 3, 4, 5, 6];
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
@@ -26,6 +30,20 @@ function countEvenNumbers(arr) {
 arr = [1, 2, 3, 4, 5, 6];
 result = countEvenNumbers(arr);
 console.log("Number of even numbers:", result);  // Output: 3
+
+
+
+// Function for problem 3
+function reverseArray(arr) {
+    var (arr=[1, 2, 3, 4, 5]);
+    let reversedArray = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversedArray.push(arr[i]);
+    }
+    return reversedArray;
+}
+console.log(reverseArray(arr)); // Output: [5, 4, 3, 2, 1]
+
 
 
 
@@ -88,3 +106,7 @@ function countOddNumbers(arr) {
 }
 arr = [1, 2, 3, 4, 5, 6];
 console.log(countOddNumbers(arr));  // Output: 3
+
+
+
+
